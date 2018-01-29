@@ -1,0 +1,65 @@
+.header__registration {
+  background-image: url("../../../assets/images/backgrounds/header-registration-bg.jpg");
+  background-size: cover;
+  display: flex;
+  padding: 35px 0; }
+  .header__registration .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; }
+  .header__registration .btn-forgotPassword {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 11%;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #9f9f9f;
+    margin-top: 15px; }
+  .header__registration .button-wrapper {
+    margin-right: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer; }
+    .header__registration .button-wrapper:last-of-type {
+      margin-right: 0;
+      margin-left: 2%; }
+    .header__registration .button-wrapper.btn--red {
+      background-image: url("../../../assets/images/buttons/btn--red.png");
+      box-shadow: 0px 0px 10px #ca6138; }
+      .header__registration .button-wrapper.btn--red .btn-registration {
+        box-shadow: 0px 0px 5px #5bb7cf, inset 0px 0px 5px #ca6138;
+        color: #ffce81; }
+    .header__registration .button-wrapper.btn--blue {
+      background-image: url("../../../assets/images/buttons/btn--blue.png");
+      box-shadow: 0px 0px 10px #4b7fca; }
+      .header__registration .button-wrapper.btn--blue .btn-registration {
+        box-shadow: 0px 0px 5px #5bb7cf, inset 0px 0px 5px #5bb7cf;
+        color: #81fbff; }
+    .header__registration .button-wrapper .btn-registration {
+      background-color: transparent;
+      border: none;
+      padding: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer; }
+  .header__registration .input-group {
+    width: 32%; }
+  .header__registration .header__input {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 7px;
+    border: none;
+    border-radius: 5px;
+    color: #9f9f9f;
+    font-style: italic;
+    background-color: #f1f0f0; }
+    .header__registration .header__input:focus {
+      border: none;
+      outline: none; }
+    .header__registration .header__input:active {
+      outline: none;
+      border: none; }
+    .header__registration .header__input--username {
+      margin-right: 2%; }

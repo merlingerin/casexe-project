@@ -1,0 +1,16 @@
+.header__lang {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+  .header__lang .lang__flag {
+    width: 22px;
+    height: 22px; }
+  .header__lang .lang__lang-select {
+    background-color: #111111;
+    color: #fff;
+    border: none;
+    margin-left: 5px; }
+    .header__lang .lang__lang-select:focus {
+      border: none;
+      outline: none; }
