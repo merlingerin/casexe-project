@@ -4,13 +4,15 @@ import {
 } from 'react-router-dom';
 
 import Header from './Header/Header';
-import Modal from './Modal/Modal';
 import HomePage from '../containers/HomePage/';
+import WidgetBar from '../containers/WidgetBar';
+
 
 const Layout = () => (
     <div className="app__layout">
             <Header />
-            <Route exact path="/"  component={Modal} />
+            <WidgetBar />
+            <Route exact path="/"  component={HomePage} />
     </div>
 );
 

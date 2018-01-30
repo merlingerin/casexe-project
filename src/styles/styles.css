@@ -27,12 +27,16 @@ ul, nav {
   list-style: none;
   list-style-type: none; }
 
+.clearfix:after {
+  content: '';
+  width: 100%;
+  float: none;
+  display: inline-block; }
+
 .container {
   max-width: 1024px;
   width: 100%;
   margin: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -46,6 +50,10 @@ ul, nav {
 .flex {
   display: flex; }
 
+.text--gold {
+  color: #f2de7b !important;
+  text-shadow: 0px 0px 15px #f2de7b; }
+
 .hover--gold {
   transition: all .2s ease-in-out; }
   .hover--gold:hover {
@@ -57,3 +65,273 @@ ul, nav {
   .hover--blue:hover {
     color: #E3F2FD;
     text-shadow: 0px 0px 15px #90CAF9; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0; }
+
+.btn-default {
+  background-color: transparent;
+  padding: 3px 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.btn--red {
+  color: #ffce81;
+  border: 1px solid #ffce81;
+  box-shadow: 0px 0px 25px #ffce81, inset 0 0 15px #ffce81;
+  background-color: #992b00; }
+
+.btn--blue {
+  box-shadow: 0px 0px 25px #81fbff, inset 0px 0px 15px #5bb7cf;
+  color: #81fbff;
+  background-color: #1c3999;
+  border: 1px solid #81fbff; }
+
+.btn:active {
+  border-style: solid; }
+
+.btn:focus {
+  outline: none; }
+
+/*##################################
+########    MODAL  
+##################################*/
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center; }
+  .modal-wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; }
+
+.modal {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  max-width: 490px;
+  margin: auto;
+  padding: 50px 45px;
+  border: 1px solid #138ff7;
+  background-color: #000722;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #dfe0e3;
+  vertical-align: middle; }
+  .modal__btn-submit {
+    float: right; }
+  .modal .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .modal .btn-close i {
+      font-size: 18px;
+      margin-right: 7px; }
+  .modal h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #138ff7;
+    font-weight: 700;
+    text-align: left; }
+  .modal .modal-errors__list {
+    margin: 10px 0 20px;
+    font-weight: 300;
+    font-size: 14px; }
+    .modal .modal-errors__list .fa-exclamation-circle {
+      margin-right: 7px;
+      color: #e30103; }
+  .modal .ipAdreess-container {
+    padding: 15px 0;
+    display: flex;
+    flex-flow: row wrap; }
+    .modal .ipAdreess-container .btn-removeIpAddress {
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .2s ease-in; }
+      .modal .ipAdreess-container .btn-removeIpAddress:hover {
+        color: #e30103;
+        text-shadow: 0 0 15px #e30103; }
+    .modal .ipAdreess-container .ipAdress__item {
+      flex: 0 0 60%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-bottom: 5px; }
+      .modal .ipAdreess-container .ipAdress__item .icon-remove {
+        margin-right: 5px;
+        font-style: normal;
+        font-size: 16px;
+        vertical-align: middle; }
+  .modal .btn-addIpAddress {
+    align-self: center;
+    color: #dfe0e3; }
+    .modal .btn-addIpAddress .fa {
+      color: #138ff7;
+      margin-right: 5px; }
+  .modal .input-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 20px; }
+    .modal .input-group .error {
+      border-color: red; }
+    .modal .input-group label {
+      align-self: center; }
+    .modal .input-group input {
+      flex: 0 0 60%;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid #138ff7;
+      padding: 0 10px;
+      background-color: #000;
+      line-height: 28px;
+      color: #E3F2FD; }
+      .modal .input-group input[name="ipAddress"] {
+        max-width: 44%;
+        flex: 0 0 45%;
+        margin-right: 1.5%;
+        margin-left: auto; }
+      .modal .input-group input .error {
+        border-color: #e30103; }
+    .modal .input-group .error-text {
+      flex: 0 0 60%;
+      margin-left: auto;
+      padding: 5px 0 0;
+      font-size: 14px; }
+      .modal .input-group .error-text i {
+        margin-right: 5px;
+        color: #e30103; }
+
+/*######  /.END MODAL 
+####################################*/
+/*##################################
+########    HEADER CARUSEL  
+##################################*/
+.header__carusel .slide {
+  background: transparent; }
+  .header__carusel .slide__content-image {
+    padding: 10% 3%; }
+  .header__carusel .slide__wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; }
+
+/*######  /.END HEADER CARUSEL 
+####################################*/
+/*##################################
+########    WIDGET BAR  
+##################################*/
+.widget-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 1px solid #c0dcff; }
+  .widget-bar .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+  .widget-bar .left-widget {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-right: auto; }
+  .widget-bar .right-widget {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: auto; }
+
+/*######  /.END WIDGET BAR 
+####################################*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn; }

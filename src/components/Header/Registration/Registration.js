@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+
+import Modal from '../../Modal/Modal';
 
 import './Registration.css';
 
 const RegistrationButton = (props) => {
     let { color, text } = props;
-    const _handleClick = () => {
-        console.log('====================================');
-        console.log('registrations clicked', color);
-        console.log('====================================');
-    }
+
     return (
         <div 
             className="button-wrapper"
@@ -18,7 +17,7 @@ const RegistrationButton = (props) => {
             <button
                 className={`btn btn-registration`}
                 name="registration"
-                onClick={_handleClick}
+                onClick={props._toggleModal}
             >
                 { text }
             </button>
@@ -26,28 +25,48 @@ const RegistrationButton = (props) => {
     )
 }
 
-export const Registration = () => {
-    return (
-        <div className="header__registration">
-            <div className="container">
-                <RegistrationButton text='Registration' color='blue' />
-                <div className="input-group">
-                    <input 
-                        className="header__input header__input--username" 
-                        type="text"
-                        placeholder="Username"                    
+export default class Registration extends Component {
+    state = {
+        isModalOpen: false
+    }
+    
+    _toggleModal = () => {
+        this.setState(prevState => ({isModalOpen: !this.state.isModalOpen}));
+    }
+
+    render() {
+        return (
+            <div className="header__registration">
+                <div className="container">
+                    <RegistrationButton 
+                        text='Registration' 
+                        color='blue' 
+                        _toggleModal={this._toggleModal}
                     />
-                    <input 
-                        className="header__input header__input--password" 
-                        type="password"
-                        placeholder="Password"
-                    />
+                    <div className="input-group">
+                        <input 
+                            className="header__input header__input--username" 
+                            type="text"
+                            placeholder="Username"                    
+                        />
+                        <input 
+                            className="header__input header__input--password" 
+                            type="password"
+                            placeholder="Password"
+                        />
+                    </div>
+                    <RegistrationButton text='Login' color='red' />
+                    <div className="row">
+                        <Link to="/" className="btn btn-forgotPassword">Forgot Password</Link>
+                    </div>
                 </div>
-                <RegistrationButton text='Login' color='red' />
-                <div className="row">
-                    <Link to="/" className="btn btn-forgotPassword">Forgot Password</Link>
-                </div>
+                {   this.state.isModalOpen &&
+                    ReactDOM.createPortal(
+                    <Modal _toggleModal={this._toggleModal} />,
+                    document.getElementById('registration-modal')
+                    )
+                }
             </div>
-        </div>
-      )
+          )
+    }
 }

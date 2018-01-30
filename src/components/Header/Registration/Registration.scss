@@ -18,43 +18,49 @@
     }
     .button-wrapper {
         margin-right: 2%;
-        &:last-of-type {
-            margin-right: 0;
-            margin-left: 2%;
-        }
-        &.btn--red {
-            background-image: url('../../../assets/images/buttons/btn--red.png');
-            box-shadow: 0px 0px 10px #ca6138; 
-            .btn-registration {
-                box-shadow: 0px 0px 5px #5bb7cf, inset 0px 0px 5px #ca6138;
-                color: #ffce81;
-            }  
-        }
-        &.btn--blue {
-            background-image: url('../../../assets/images/buttons/btn--blue.png');
-            box-shadow: 0px 0px 10px #4b7fca;     
-            .btn-registration {
-                box-shadow: 0px 0px 5px #5bb7cf, inset 0px 0px 5px #5bb7cf;
-                color: #81fbff;
-            }            
-        }
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-block;
         border-radius: 5px;
+        &.btn--red {
+            margin-right: 0;
+            margin-left: 2%;
+            .btn-registration {
+                color: #ffce81;
+                border: 1px solid #ffce81;
+                box-shadow: 0px 0px 25px #ffce81, inset 0 0 15px #ffce81;
+                background-color: #992b00;
+            }  
+        }
+        &.btn--blue {
+            .btn-registration {
+                box-shadow: 0px 0px 25px #81fbff, inset 0px 0px 15px #5bb7cf;
+                color: #81fbff;
+                background-color: #1c3999;
+                border: 1px solid #81fbff;
+            }            
+        }
         cursor: pointer;
         .btn-registration {
             background-color: transparent;
-            border: none;
-            padding: 3px;
+            padding: 3px 15px;
             text-transform: uppercase;
             font-weight: 700;
             border-radius: 5px;
-            cursor: pointer;            
+            cursor: pointer;
+            &:active {
+                border-style: solid;                
+            }          
+            &:focus {
+                outline: none;
+            }
         }        
     }
     .input-group {
         width: 32%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
     .header__input {
         font-size: 12px;

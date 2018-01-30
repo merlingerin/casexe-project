@@ -1,0 +1,46 @@
+.last-winners {
+  padding: 1% 0; }
+  .last-winners .slider-container {
+    padding: 20px 0;
+    width: 100%; }
+  .last-winners .slick-slider {
+    padding: 0 5px; }
+  .last-winners .slide__card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+  .last-winners .card__image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    width: 54%;
+    display: inline-block;
+    margin-right: 10px; }
+  .last-winners .last-winners__title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif; }
+  .last-winners .card__content {
+    font-family: "Roboto Condensed", sans-serif; }
+    .last-winners .card__content .game-title {
+      text-transform: uppercase;
+      font-size: 14px; }
+    .last-winners .card__content .prize {
+      color: #f2de7b;
+      font-size: 12px; }
+    .last-winners .card__content .player-name {
+      font-size: 12px;
+      color: #bfbfbf; }
+  .last-winners .slick-arrow {
+    height: 28px;
+    width: 28px; }
+  .last-winners .slick-arrow:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 28px;
+    text-shadow: 0px 0px 20px #f2de7b;
+    color: #f2de7b; }
+  .last-winners .slick-next:before {
+    content: '\f105'; }
+  .last-winners .slick-prev:before {
+    content: '\f104'; }
