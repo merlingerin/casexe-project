@@ -5,7 +5,7 @@
   border-bottom: 1px solid #93cfec;
   padding-top: .5%; }
   .header__registration .registration__controls {
-    flex: 0 0 50%;
+    flex: 0 0 55%;
     display: flex;
     align-self: center;
     flex-flow: row wrap;

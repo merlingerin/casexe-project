@@ -9,7 +9,8 @@
   .jack-pot__container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-top: 10px; }
   .jack-pot__card {
     display: flex;
     flex-flow: row wrap;

@@ -1,9 +1,7 @@
 @import './body.scss';
 @import '../assets/fonts/font-awesome.min.css';
-
 @import url('https://fonts.googleapis.com/css?family=Neucha');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
-
 .clearfix:after {
     content: '';
     width: 100%;
@@ -25,31 +23,31 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-  }
+}
 
 .flex {
     display: flex;
 }
 
 .text--gold {
-    color: #f2de7b!important;
+    color: #f2de7b !important;
     text-shadow: 0px 0px 15px #f2de7b;
 }
 
 .hover--gold {
-    transition: all .2s ease-in-out;   
+    transition: all .2s ease-in-out;
     &:hover {
-        color: #f2de7b!important;
+        color: #f2de7b !important;
         text-shadow: 0px 0px 15px #f2de7b;
     }
 }
 
 .hover--blue {
-    transition: all .2s ease-in-out;   
+    transition: all .2s ease-in-out;
     &:hover {
         color: #E3F2FD;
         text-shadow: 0px 0px 15px #90CAF9;
-    }  
+    }
 }
 
 .overlay {
@@ -58,7 +56,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
     z-index: 0;
 }
 
@@ -83,163 +81,18 @@
         background-color: #1c3999;
         border: 1px solid #81fbff;
     }
-
     &:active {
-        border-style: solid;                
-    }          
+        border-style: solid;
+    }
     &:focus {
         outline: none;
     }
-}  
-
-/*##################################
-########    MODAL  
-##################################*/
-.modal-wrapper {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    text-align: center;
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
-    }
 }
-.modal {
-    position: relative;
-    width: 100%;
-    display: inline-block;    
-    max-width: 490px;
-    margin: auto;
-    padding: 50px 45px;
-    border: 1px solid #138ff7;
-    background-color: #000722;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #dfe0e3;
-    vertical-align: middle;  
-    &__btn-submit {
-        float: right;
-    }
-    .btn-close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 15px;
-        text-transform: uppercase;
-        cursor: pointer;
-        i {
-            font-size: 18px;
-            margin-right: 7px;
-        }
-    }
-    h4 {
-        font-size: 24px;
-        text-transform: uppercase;
-        text-shadow: 0 0 10px #138ff7;
-        font-weight: 700;
-        text-align: left;
-    }
-    .modal-errors__list {
-        margin: 10px 0 20px;
-        font-weight: 300;
-        font-size: 14px;
-        .fa-exclamation-circle {
-            margin-right: 7px;
-            color: #e30103;
-        }
-    }
-    .ipAdreess-container {
-        padding: 15px 0;
-        display: flex;
-        flex-flow: row wrap;
-        .btn-removeIpAddress {
-            font-size: 14px;
-            cursor: pointer;
-            transition: all .2s ease-in;
-            &:hover {
-                color: #e30103;
-                text-shadow: 0 0 15px #e30103;
-            }
-        }
-        .ipAdress__item {
-            flex: 0 0 60%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            margin-left: auto;
-            margin-bottom: 5px;
-            .icon-remove {
-                margin-right: 5px;
-                font-style: normal;
-                font-size: 16px;
-                vertical-align: middle;
-            }
-        }
-    }
-    .btn-addIpAddress {
-        align-self: center;
-        color: #dfe0e3;
-        .fa {
-            color: #138ff7;
-            margin-right: 5px;
-        }
-    }
-    .input-group {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-bottom: 20px;
-        .error {
-            border-color: red;
-        }
-        label {
-            align-self: center;
-        }
-        input {
-            flex: 0 0 60%;
-            border-radius: 3px;
-            outline: none;
-            border: 1px solid #138ff7;
-            padding: 0 10px;
-            background-color: #000;
-            line-height: 28px;
-            color: #E3F2FD;
-            &[name = "ipAddress"] {
-                max-width: 44%;
-                flex: 0 0 45%;
-                margin-right: 1.5%;
-                margin-left: auto;
-            }
-            .error {
-                border-color: #e30103;
-            }
-        }
-        .error-text {
-            flex: 0 0 60%;
-            margin-left: auto;
-            padding: 5px 0 0;
-            font-size: 14px;
-            text-align: left;
-            i {
-                margin-right: 5px;
-                color: #e30103;
-            }
-        }
-    }
-}
-/*######  /.END MODAL 
-####################################*/
-
 
 /*##################################
 ########    HEADER CARUSEL  
 ##################################*/
+
 .header__carusel {
     .slide {
         background: transparent;
@@ -253,13 +106,14 @@
         }
     }
 }
+
 /*######  /.END HEADER CARUSEL 
 ####################################*/
-
 
 /*##################################
 ########    WIDGET BAR  
 ##################################*/
+
 .widget-bar {
     display: flex;
     flex-flow: row wrap;
@@ -281,129 +135,63 @@
         margin-left: auto;
     }
 }
+
 /*######  /.END WIDGET BAR 
 ####################################*/
 
-
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  
-  .animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-  }
-  
-
-  @-webkit-keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-  
-    20% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-  
-    40% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9);
-      transform: scale3d(0.9, 0.9, 0.9);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: scale3d(1.03, 1.03, 1.03);
-      transform: scale3d(1.03, 1.03, 1.03);
-    }
-  
-    80% {
-      -webkit-transform: scale3d(0.97, 0.97, 0.97);
-      transform: scale3d(0.97, 0.97, 0.97);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  
-  @keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-  
-    20% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-  
-    40% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9);
-      transform: scale3d(0.9, 0.9, 0.9);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: scale3d(1.03, 1.03, 1.03);
-      transform: scale3d(1.03, 1.03, 1.03);
-    }
-  
-    80% {
-      -webkit-transform: scale3d(0.97, 0.97, 0.97);
-      transform: scale3d(0.97, 0.97, 0.97);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  
-  .bounceIn {
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-  }
-
-  .games__grid {
+.games__grid {
     .card {
         display: block;
         float: left;
-        width: 19.5%;
+        width: 17%;
         height: 150px;
+        margin: 0 1.5% 1%;
+        img {
+            transition: all .5s ease-in-out;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+            .card__image {
+                box-shadow: 0 0 15px 1px #148aed;
+                border: 1px solid #148aed;
+            }
+            .inner-overlay {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+        .inner-overlay {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .7);
+            transition: all .5s ease-in-out;
+            .btn--blue {
+                margin-top: auto;
+            }
+            .btn--red {
+                margin-bottom: auto;
+                margin-top: 10px;
+            }
+        }
         &__image {
             width: 100%;
             height: auto;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
         &__game-title {
             color: #e8e9ea;
@@ -416,7 +204,175 @@
     .some-slider {
         display: block;
         float: right;
-        width: 39%;
+        width: 38.5%;
         height: 300px;
+        margin: 0 1.5% 2% 0;
+        max-width: 38.5%;
+        max-height: 300px;
+        padding-bottom: 20px;
     }
-  }
+}
+
+.index-page {
+    padding: 15% 0;
+    .hero-title {
+        text-align: center;
+    }
+    .hero-cite {
+        float: right;
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+}
+
+@-webkit-keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+}

@@ -1,4 +1,66 @@
 .home-page {
+    padding-bottom: 2%;
     background-image: url("../../assets/images/backgrounds/homepage-bg.jpg");
+    border-bottom: 1px solid #afe1fa;
+    .games {
+        &__header {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 10px 1.5% 5px;
+        }
+        &__sort {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            text-transform: uppercase;
+            .sort {
+                &__text {
+                    margin-right: 10px;                    
+                    font-weight: 300;
+                }
+                &__byPopularity {
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+                &__byAlphabet {
+                    font-style: 500;
+                    cursor: pointer;
+                }
+            }
+            .divider {
+                margin: 0 10px;
+            }
+        }
+    }
+    .games__search {
+        .search__input {
+            color: #ffffff;
+            padding: 0 10px;
+            background-color: #000000;
+            border: 2px solid #89fbff;
+            box-shadow: 0px 0px 10px 3px #5373b8;
+            border-radius: 5px;
+            line-height: 1.75rem;
+        }
+    }
+    .input-group {
+        position: relative;
+        .fa-search {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 5px;
+            width: 24px;
+            height: 24px;       
+            font-size: 20px;
+            margin: auto;
+        }
+    }
+    .btn-wrapper {
+        width: 100%;
+        text-align: center;
+    }
 }
-  

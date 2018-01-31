@@ -1,0 +1,44 @@
+.footer {
+    padding: 2% 0;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    &__links-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        flex: 0 0 100%;
+        max-width: 500px;
+    }
+    &__partners-list {
+        margin: 3% 0 1%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        flex: 0 0 100%;
+        max-width: 750px;
+    }
+    .links-list__link {
+        font-size: 14px;
+        color: #949393;
+    }
+    .partners-list__link {
+        width: 120px;
+        height: 70px;
+        display: inline-block;
+        background-image: url('../../assets/images/footer/partner-1.png');        
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .partner {
+        &--visa {
+            background-image: url('../../assets/images/footer/partner-1.png');
+        }
+        &--paypal {
+            background-image: url('../../assets/images/footer/partner-2.png');            
+        }
+    }
+}

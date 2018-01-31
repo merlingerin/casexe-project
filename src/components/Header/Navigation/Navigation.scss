@@ -12,6 +12,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
+        flex: 0 0 56%;
         .list__link {
             padding: 5px 5px;
             font-size: 12px;
@@ -19,6 +20,10 @@
             color: #a2a1a1;
             font-family: 'Roboto Condensed', sans-serif;    
             text-transform: uppercase;
+            &.active {
+                color: #f2de7b!important;
+                text-shadow: 0px 0px 15px #f2de7b;
+            }
         }
     }
     .social-links__list {
@@ -52,6 +57,7 @@
         }
     }
     .registration__btn {
+        text-transform: uppercase;
         cursor: pointer;
         .registration__bolt {
             margin-right: 5px;

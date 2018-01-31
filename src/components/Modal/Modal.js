@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import './Modal.css';
 
-const IpItem = ({ip, removeAress}) => (
+const IpItem = ({ip, removeAress, btnText}) => (
     <div className="ipAdress__item">
         <span className="ipAdress__text" >{ip}</span>
         <span 
@@ -8,7 +9,7 @@ const IpItem = ({ip, removeAress}) => (
             onClick={removeAress}
         >
             <i className="icon-remove">&times;</i>
-            remove
+            {btnText}
         </span>
     </div>
 )
@@ -23,7 +24,7 @@ export default class Modal extends Component {
             inputError: {},
             modalErrors: [],
             confirmPassword: '',
-            ipAddresses: ["120.12.12.122", "120.12.12.122", "120.12.12.122", "120.12.12.122", "120.12.12.122"]
+            ipAddresses: ["120.12.12.122", "120.12.12.122"]
         }
     }
 
@@ -35,7 +36,7 @@ export default class Modal extends Component {
     renderIpAddress = () => {
         return (
             this.state.ipAddresses.map((item, idx) => {
-                return <IpItem key={idx} ip={item} removeAress={() => this._handleRemoveAddress(idx)} />
+                return <IpItem key={idx} ip={item} btnText={this.props.vocabulary.modal.remove} removeAress={() => this._handleRemoveAddress(idx)} />
             })
         )
     }
@@ -331,27 +332,28 @@ export default class Modal extends Component {
                     onClick={this._handleClose}
                 ></div>
                 <div className="modal clearfix animated bounceIn">
-                    <span 
+                    <div 
                         className="modal__btn btn-close"
                         onClick={this._handleClose}
                     >
-                        <i className="fa fa-times" aria-hidden="true"></i>
-                        Close
-                    </span>
+                        <i className="fa fa-times btn-close__icon" aria-hidden="true"></i>
+                        <span className="btn-close__text mobile-hidden">{this.props.vocabulary.modal.close}</span>
+                    </div>
                     <div className="modal__header">
-                        <h4>Registration</h4>
+                        <h4>{this.props.vocabulary.modal.registration}</h4>
                         <ModalErrors />
                     </div>
                     <div className="modal__body">
                         <div className="input-group">
-                            <label htmlFor="username">Name*</label>
+                            <label htmlFor="username">{this.props.vocabulary.modal.name}*</label>
                             <input 
-                                className={`${this.state.inputError.username ? 'error' : ''}`}
+                                className={`${this.state.inputError.username ? 'error animated shake' : ''}`}
                                 name="username" 
                                 type="text"
                                 onKeyUp={this._validateUserName}
                                 onKeyDown={this._preventInput}
                                 onChange={this._handleInput}
+                                placeholder={`${this.props.vocabulary.modal.name}*`}
                                 required
                             />
                             { this.state.inputError.username ? 
@@ -365,20 +367,21 @@ export default class Modal extends Component {
                             }
                         </div>
                         <div className="input-group">
-                            <label htmlFor="ipAddress">Ip Address*</label>
+                            <label htmlFor="ipAddress">{this.props.vocabulary.modal.ipAddress}*</label>
                             <input 
-                                className={`${this.state.inputError.ipAddress ? 'error' : ''}`}                            
+                                className={`${this.state.inputError.ipAddress ? 'error animated shake' : ''}`}                            
                                 name="ipAddress"
-                                type="text"
+                                type="tel"
                                 onChange={this._handleInput}
                                 onKeyUp={this._validationIpAddress}
+                                placeholder={`${this.props.vocabulary.modal.ipAddress}*`}
                             />
                             <span
                                 className="btn-addIpAddress"
                                 onClick={this._handleAddAddress}
                             >
                                 <i className="fa fa-plus-square" aria-hidden="true"></i>
-                                add IP
+                                {this.props.vocabulary.modal.addIp}
                             </span>
                             { this.state.inputError.ipAddress ? 
                                 (
@@ -394,12 +397,13 @@ export default class Modal extends Component {
                             { this.renderIpAddress() }
                         </div>
                         <div className="input-group">
-                            <label htmlFor="email">Email*</label>
+                            <label htmlFor="email">{this.props.vocabulary.modal.email}*</label>
                             <input 
-                                className={`${this.state.inputError.email ? 'error' : ''}`}                            
+                                className={`${this.state.inputError.email ? 'error  animated shake' : ''}`}                            
                                 name="email" 
                                 type="email"
-                                onChange={this._handleInput && this._validateEmail}                                
+                                onChange={this._handleInput && this._validateEmail}     
+                                placeholder={`${this.props.vocabulary.modal.email}*`}                           
                                 required
                             />
                             { this.state.inputError.email ? 
@@ -413,14 +417,15 @@ export default class Modal extends Component {
                             }
                         </div>
                         <div className="input-group">
-                            <label htmlFor="password">Password*</label>
+                            <label htmlFor="password">{this.props.vocabulary.modal.password}*</label>
                             <input 
-                                className={`${this.state.inputError.password ? 'error' : ''}`}                            
+                                className={`${this.state.inputError.password ? 'error  animated shake' : ''}`}                            
                                 name="password" 
                                 type="password" 
                                 required
                                 onKeyUp={this._validatePassword}
                                 onChange={this._handleInput}
+                                placeholder={`${this.props.vocabulary.modal.password}*`}
                             />
                             { this.state.inputError.password ? 
                                 (
@@ -433,13 +438,14 @@ export default class Modal extends Component {
                             }
                         </div>
                         <div className="input-group">
-                            <label htmlFor="confirmPassword">Confirm Password*</label>
+                            <label htmlFor="confirmPassword">{this.props.vocabulary.modal.confirmPassword}*</label>
                             <input 
-                                className={`${this.state.inputError.confirmPassword ? 'error' : ''}`}                            
+                                className={`${this.state.inputError.confirmPassword ? 'error  animated shake' : ''}`}                            
                                 name="confirmPassword" 
                                 type="password" 
                                 onKeyUp={this._validateConfirmPassword}
-                                onChange={this._handleInput}                                
+                                onChange={this._handleInput}
+                                placeholder={`${this.props.vocabulary.modal.confirmPassword}*`}                                
                                 required 
                             />
                             { this.state.inputError.confirmPassword ? 
@@ -457,7 +463,7 @@ export default class Modal extends Component {
                             type="submit"
                             onClick={this._handleSubmit}
                         >
-                            Submit
+                            {this.props.vocabulary.modal.submit}
                         </button>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ const modal = ( state = initialState || {}, action ) => {
     switch (action.type) {
         case TOGGLE_MODAL:
             return state = {
+                ...state,
                 isOpenModal: !state.isOpenModal
             }
         default:

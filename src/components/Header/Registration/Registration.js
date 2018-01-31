@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Modal from '../../Modal/Modal';
-import { toggleModal } from '../../../actions';
 
 import './Registration.css';
 
@@ -31,7 +29,7 @@ class Registration extends Component {
                     </Link>
                     <div className="registration__controls">
                         <RegistrationButton 
-                            text='Registration' 
+                            text={this.props.vocabulary.buttons.registration} 
                             color='blue' 
                             specialClass='registration'
                             _toggleModal={this.props.toggleModal}
@@ -48,13 +46,13 @@ class Registration extends Component {
                                 placeholder="Password"
                             />
                         </div>
-                        <RegistrationButton text='Login' color='red' specialClass='login' />
-                        <Link to="/" className="btn btn-forgotPassword">Forgot Password</Link>
+                        <RegistrationButton text={this.props.vocabulary.buttons.login} color='red' specialClass='login' />
+                        <Link to="/" className="btn btn-forgotPassword">{this.props.vocabulary.buttons.forgot_password}</Link>
                     </div>
                 </div>
-                {   this.props.modal.isOpenModal &&
+                {   this.props.isOpenModal &&
                     ReactDOM.createPortal(
-                    <Modal _toggleModal={this.props.toggleModal} />,
+                    <Modal _toggleModal={this.props.toggleModal} vocabulary={this.props.vocabulary} />,
                     document.getElementById('registration-modal')
                     )
                 }
@@ -63,12 +61,4 @@ class Registration extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    modal: state.modal
-})
-
-const mapDispatchToProps = {
-    toggleModal
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Registration)
+export default Registration;

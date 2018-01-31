@@ -1,87 +1,108 @@
 export default [
     {
         id: 1,
+        rate: 4.12,
         image:  `${require('../../assets/images/games/AnubisSecret.jpg')}`,
         title: 'AnubisSecret'
     }, {
         id: 2,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.11,
+        image: `${require('../../assets/images/games/DreamOfKnight.jpg')}`,
+        title: 'Dream of Knight'
     }, {
         id: 3,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.72,
+        image: `${require('../../assets/images/games/LuckyMagic.jpg')}`,
+        title: 'Lucky Magic'
     }, {
         id: 4,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.02,
+        image: `${require('../../assets/images/games/Submarine.jpg')}`,
+        title: 'Submarine adventure'
     }, {
         id: 5,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.87,
+        image: `${require('../../assets/images/games/MoneyScent.jpg')}`,
+        title: 'The big money scent'
     }, {
         id: 6,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.12,        
+        image:  `${require('../../assets/images/games/AnubisSecret.jpg')}`,
+        title: 'AnubisSecret'
     }, {
         id: 7,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.11,
+        image: `${require('../../assets/images/games/DreamOfKnight.jpg')}`,
+        title: 'Dream of Knight'
     }, {
         id: 8,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.72,
+        image: `${require('../../assets/images/games/LuckyMagic.jpg')}`,
+        title: 'Lucky Magic'
     }, {
         id: 9,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.02,
+        image: `${require('../../assets/images/games/Submarine.jpg')}`,
+        title: 'Submarine adventure'
     }, {
         id: 10,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.87,
+        image: `${require('../../assets/images/games/MoneyScent.jpg')}`,
+        title: 'The big money scent'
     }, {
         id: 11,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.12,        
+        image:  `${require('../../assets/images/games/AnubisSecret.jpg')}`,
+        title: 'AnubisSecret'
     }, {
         id: 12,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.11,
+        image: `${require('../../assets/images/games/DreamOfKnight.jpg')}`,
+        title: 'Dream of Knight'
     }, {
         id: 13,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.72,
+        image: `${require('../../assets/images/games/LuckyMagic.jpg')}`,
+        title: 'Lucky Magic'
     }, {
         id: 14,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.02,
+        image: `${require('../../assets/images/games/Submarine.jpg')}`,
+        title: 'Submarine adventure'
     }, {
         id: 15,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.87,
+        image: `${require('../../assets/images/games/MoneyScent.jpg')}`,
+        title: 'The big money scent'
     }, {
         id: 16,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.12,        
+        image:  `${require('../../assets/images/games/AnubisSecret.jpg')}`,
+        title: 'AnubisSecret'
     }, {
         id: 17,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.11,
+        image: `${require('../../assets/images/games/DreamOfKnight.jpg')}`,
+        title: 'Dream of Knight'
     }, {
         id: 18,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.72,
+        image: `${require('../../assets/images/games/LuckyMagic.jpg')}`,
+        title: 'Lucky Magic'
     }, {
         id: 19,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 4.02,
+        image: `${require('../../assets/images/games/Submarine.jpg')}`,
+        title: 'Submarine adventure'
     }, {
         id: 20,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.87,
+        image: `${require('../../assets/images/games/MoneyScent.jpg')}`,
+        title: 'The big money scent'
     }, {
         id: 21,
-        image: `${require('../../assets/images/games/AnubisSecret.jpg')}`,
-        title: 'Game'
+        rate: 3.87,
+        image: `${require('../../assets/images/games/MoneyScent.jpg')}`,
+        title: 'The big money scent'
     }
 ]

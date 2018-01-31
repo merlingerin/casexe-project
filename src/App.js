@@ -7,12 +7,11 @@ import { Provider } from 'react-redux';
 import store from './store/index';
 
 import Layout from './components/Layout';
-import Modal from './components/Modal/Modal';
 
 const App = () => (
   <Provider store={store}>
     <Router>
-      <Route path="/" component={Layout} />
+        <Layout/>
     </Router>
   </Provider>
 )

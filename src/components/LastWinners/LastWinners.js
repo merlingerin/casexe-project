@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
+
 import './LastWinners.css';
 
 const settings = {
@@ -12,7 +14,8 @@ const settings = {
 };
 
 const sliderContent = [
-    {
+    {   
+        id: 1,
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-1.jpg`)})`,
         contentText: {
             game: 'Lorem 1',
@@ -20,6 +23,7 @@ const sliderContent = [
             palyerName: 'Player 1'
         }
     }, {
+        id: 2,        
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-2.jpg`)})`,
         contentText: {
             game: 'Lorem 2',
@@ -27,6 +31,7 @@ const sliderContent = [
             palyerName: 'Player 2'
         }
     }, {
+        id: 3,
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-3.jpg`)})`,
         contentText: {
             game: 'Lorem 3',
@@ -35,6 +40,7 @@ const sliderContent = [
         }
     },
     {
+        id: 4,
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-1.jpg`)})`,
         contentText: {
             game: 'Lorem 1',
@@ -42,6 +48,7 @@ const sliderContent = [
             palyerName: 'Player 1'
         }
     }, {
+        id: 5,
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-2.jpg`)})`,
         contentText: {
             game: 'Lorem 2',
@@ -49,6 +56,7 @@ const sliderContent = [
             palyerName: 'Player 2'
         }
     }, {
+        id: 6,
         contentImage: `url(${require(`../../assets/images/sliders/last-winners/last-winners-3.jpg`)})`,
         contentText: {
             game: 'Lorem 3',
@@ -57,8 +65,6 @@ const sliderContent = [
         }
     }
 ];
-
-const container = { margin: '0 auto', padding: '40px', width: '50%', color: '#333', background: '#419be0'};
 
 export const LastWinners = (props) => (
     <div className="last-winners">
@@ -71,9 +77,9 @@ export const LastWinners = (props) => (
                 {
                     sliderContent.map((item, idx) => {
                         return (
-                            <div 
+                            <Link to={`player/id=${item.id}`}
                                 className="slide__wrapper"
-                                key={idx} 
+                                key={item.id} 
                             >
                                 <div className="slide__card">
                                     <i className="card__image"
@@ -87,7 +93,7 @@ export const LastWinners = (props) => (
                                         <li className="player-name">{item.contentText.palyerName}</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </Link>
                         )
                     })
                 }

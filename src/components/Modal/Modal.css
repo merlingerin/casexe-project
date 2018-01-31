@@ -1,0 +1,205 @@
+/*##################################
+########    MODAL  
+##################################*/
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center; }
+  .modal-wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; }
+
+.modal {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  max-width: 510px;
+  margin: auto;
+  padding: 50px 45px;
+  border: 1px solid #138ff7;
+  background-color: #000722;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #dfe0e3;
+  vertical-align: middle; }
+  .modal__btn-submit {
+    float: right; }
+  .modal .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .modal .btn-close i {
+      font-size: 18px;
+      margin-right: 7px; }
+  .modal h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #138ff7;
+    font-weight: 700;
+    text-align: left; }
+  .modal .modal-errors__list {
+    margin: 10px 0 20px;
+    font-weight: 300;
+    font-size: 14px; }
+    .modal .modal-errors__list .fa-exclamation-circle {
+      margin-right: 7px;
+      color: #e30103; }
+  .modal .ipAdreess-container {
+    padding: 15px 0;
+    display: flex;
+    flex-flow: row wrap; }
+    .modal .ipAdreess-container .btn-removeIpAddress {
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .2s ease-in; }
+      .modal .ipAdreess-container .btn-removeIpAddress:hover {
+        color: #e30103;
+        text-shadow: 0 0 15px #e30103; }
+    .modal .ipAdreess-container .ipAdress__item {
+      flex: 0 0 60%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-bottom: 5px; }
+      .modal .ipAdreess-container .ipAdress__item .icon-remove {
+        margin-right: 5px;
+        font-style: normal;
+        font-size: 16px;
+        vertical-align: middle; }
+  .modal .btn-addIpAddress {
+    align-self: center;
+    font-size: 14px;
+    color: #dfe0e3;
+    cursor: pointer; }
+    .modal .btn-addIpAddress .fa {
+      color: #138ff7;
+      margin-right: 5px; }
+  .modal .input-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 3%; }
+    .modal .input-group .error {
+      border-color: red; }
+    .modal .input-group label {
+      align-self: center; }
+    .modal .input-group input {
+      flex: 0 0 60%;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid #138ff7;
+      padding: 0 10px;
+      background-color: #000;
+      line-height: 28px;
+      color: #E3F2FD; }
+      .modal .input-group input[name="ipAddress"] {
+        max-width: 44%;
+        flex: 0 0 45%;
+        margin-right: 1.5%;
+        margin-left: auto; }
+      .modal .input-group input .error {
+        border-color: #e30103; }
+    .modal .input-group .error-text {
+      flex: 0 0 60%;
+      margin-left: auto;
+      padding: 5px 0 0;
+      font-size: 14px;
+      text-align: left; }
+      .modal .input-group .error-text i {
+        margin-right: 5px;
+        color: #e30103; }
+
+@media screen and (max-width: 768px) {
+  .modal {
+    min-width: 95%;
+    padding: 30px 20px; }
+    .modal .modal-errors__list {
+      margin: 1% 0; }
+    .modal h4 {
+      text-align: center; }
+    .modal .input-group {
+      margin-bottom: 1%; }
+      .modal .input-group label {
+        align-self: center;
+        flex: 0 0 100%;
+        margin-bottom: 2px;
+        font-size: 14px;
+        text-align: left; }
+      .modal .input-group input {
+        flex: 0 0 100%; }
+      .modal .input-group input[name="ipAddress"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px; }
+    .modal .btn-close {
+      padding: 10px 8px; }
+    .modal .btn-addIpAddress {
+      display: block;
+      padding: 5px 30px;
+      margin-left: auto;
+      font-size: 14px;
+      line-height: 1rem;
+      text-align: center;
+      background-color: #138ff7;
+      border-radius: 5px;
+      box-shadow: 0px 0px 25px 1px #81fbff, inset 0px 0px 15px 3px #5bb7cf;
+      color: #81fbff;
+      background-color: #1c3999;
+      border: 1px solid #81fbff; }
+      .modal .btn-addIpAddress ~ .error-text {
+        top: 22px;
+        bottom: auto; }
+      .modal .btn-addIpAddress:active {
+        border-style: solid; }
+      .modal .btn-addIpAddress:focus {
+        outline: none; }
+      .modal .btn-addIpAddress .fa {
+        color: #dfe0e3; }
+    .modal .ipAdreess-container {
+      padding: 1% 0; }
+      .modal .ipAdreess-container .ipAdress__item {
+        flex: 0 0 100%;
+        font-size: 14px; }
+      .modal .ipAdreess-container .btn-removeIpAddress {
+        font-size: 14px; }
+    .modal .modal__btn-submit {
+      padding: 5px 30px; } }
+
+@media screen and (max-width: 470px) {
+  .modal {
+    max-width: 95%;
+    padding: 5px 20px; }
+    .modal .modal-errors__list {
+      margin: 1% 0; }
+      .modal .modal-errors__list .modal-errors__item {
+        display: none; }
+        .modal .modal-errors__list .modal-errors__item:first-child {
+          display: block; }
+    .modal h4 {
+      padding: 15px 0px; }
+    .modal .input-group {
+      position: relative;
+      margin-bottom: 6%; }
+      .modal .input-group label {
+        display: none; }
+      .modal .input-group .error-text {
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        text-align: right;
+        bottom: -10px;
+        right: 0; } }
+
+/*######  /.END MODAL 
+####################################*/
