@@ -1,8 +1,22 @@
 .header__registration {
-  background-image: url("../../../assets/images/backgrounds/header-registration-bg.jpg");
   background-size: cover;
   display: flex;
-  padding: 35px 0; }
+  border-top: 1px solid #93cfec;
+  border-bottom: 1px solid #93cfec;
+  padding-top: .5%; }
+  .header__registration .registration__controls {
+    flex: 0 0 50%;
+    display: flex;
+    align-self: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: auto; }
+  .header__registration .logo {
+    flex: 0 0 40%;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/images/logo.png"); }
   .header__registration .container {
     display: flex;
     flex-flow: row wrap;
@@ -10,43 +24,27 @@
   .header__registration .btn-forgotPassword {
     display: inline-block;
     margin-left: auto;
-    margin-right: 11%;
+    margin-right: 25%;
     font-family: 'Roboto Condensed', sans-serif;
     color: #9f9f9f;
-    margin-top: 15px; }
-  .header__registration .button-wrapper {
-    margin-right: 2%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline-block;
+    margin-top: 5px; }
+    .header__registration .btn-forgotPassword:active {
+      border: none; }
+  .header__registration .btn-login {
+    margin-left: 10px; }
+  .header__registration .btn-registration {
+    padding: 3px 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
     border-radius: 5px;
     cursor: pointer; }
-    .header__registration .button-wrapper.btn--red {
-      margin-right: 0;
-      margin-left: 2%; }
-      .header__registration .button-wrapper.btn--red .btn-registration {
-        color: #ffce81;
-        border: 1px solid #ffce81;
-        box-shadow: 0px 0px 25px #ffce81, inset 0 0 15px #ffce81;
-        background-color: #992b00; }
-    .header__registration .button-wrapper.btn--blue .btn-registration {
-      box-shadow: 0px 0px 25px #81fbff, inset 0px 0px 15px #5bb7cf;
-      color: #81fbff;
-      background-color: #1c3999;
-      border: 1px solid #81fbff; }
-    .header__registration .button-wrapper .btn-registration {
-      background-color: transparent;
-      padding: 3px 15px;
-      text-transform: uppercase;
-      font-weight: 700;
-      border-radius: 5px;
-      cursor: pointer; }
-      .header__registration .button-wrapper .btn-registration:active {
-        border-style: solid; }
-      .header__registration .button-wrapper .btn-registration:focus {
-        outline: none; }
+    .header__registration .btn-registration:active {
+      border-style: solid; }
+    .header__registration .btn-registration:focus {
+      outline: none; }
   .header__registration .input-group {
-    width: 32%;
+    flex: 3;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
@@ -65,5 +63,3 @@
     .header__registration .header__input:active {
       outline: none;
       border: none; }
-    .header__registration .header__input--username {
-      margin-right: 2%; }

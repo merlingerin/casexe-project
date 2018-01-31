@@ -27,6 +27,11 @@ export default class Modal extends Component {
         }
     }
 
+    /**
+    |--------------------------------------------------
+    | Render ip addresses from state
+    |--------------------------------------------------
+    */
     renderIpAddress = () => {
         return (
             this.state.ipAddresses.map((item, idx) => {
@@ -35,6 +40,11 @@ export default class Modal extends Component {
         )
     }
 
+    /**
+    |--------------------------------------------------
+    | Remove addres from address list
+    |--------------------------------------------------
+    */
     _handleRemoveAddress = (idx) => {
         const removeItem = this.state.ipAddresses.splice(idx, 1);
         const newArray = this.state.ipAddresses.filter((item, idx) => (idx !== removeItem));
@@ -44,6 +54,11 @@ export default class Modal extends Component {
         })
     }
 
+    /**
+    |--------------------------------------------------
+    | Validation for ip address on blank
+    |--------------------------------------------------
+    */
     _validationIpAddress = (event) => {
         let {target: { value, name }} = event;
 
@@ -58,6 +73,11 @@ export default class Modal extends Component {
 
     }
 
+    /**
+    |--------------------------------------------------
+    |  Add address to address list and validation
+    |--------------------------------------------------
+    */
     _handleAddAddress = () => {
         const validation = this.state.ipAddress.match(/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/gi);
 
@@ -101,6 +121,11 @@ export default class Modal extends Component {
         }
     }
 
+    /**
+    |--------------------------------------------------
+    | Prevent input numbers and symbols to user name
+    |--------------------------------------------------
+    */
     _preventInput = (event) => {
         let inputValue = event.which;
         let {target: { value, name }} = event;
@@ -111,6 +136,11 @@ export default class Modal extends Component {
         }
     }
 
+    /**
+    |--------------------------------------------------
+    | Validation for email
+    |--------------------------------------------------
+    */
     _validateEmail= (event) => {
         let {target: { value, name }} = event;
         var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
@@ -132,6 +162,11 @@ export default class Modal extends Component {
         })
     }
 
+    /**
+    |--------------------------------------------------
+    | Validation for user name on blank
+    |--------------------------------------------------
+    */
     _validateUserName = (event) => {
         let {target: { value, name }} = event;
 
@@ -142,7 +177,11 @@ export default class Modal extends Component {
         })
     }
 
-
+    /**
+    |--------------------------------------------------
+    | Validation password: min.value > 5, max.value < 17
+    |--------------------------------------------------
+    */
     _validatePassword = (event) => {
         let {target: { value, name }} = event;
         
@@ -171,6 +210,11 @@ export default class Modal extends Component {
         })
     }
 
+    /**
+    |--------------------------------------------------
+    | Validation confirm password
+    |--------------------------------------------------
+    */
     _validateConfirmPassword = (event) => {
         let {target: { value, name }} = event;
         let password = this.state.password;
@@ -191,12 +235,23 @@ export default class Modal extends Component {
         })
     }
 
+    /**
+    |--------------------------------------------------
+    | Data binding input to state onChange
+    |--------------------------------------------------
+    */
     _handleInput = ({target: { value, name }}) => {
         this.setState({
             [name]: value
         })
     }
 
+    /**
+    |--------------------------------------------------
+    | Submit action;
+    | Check on errors and prepare data for post
+    |--------------------------------------------------
+    */
     _handleSubmit = () => {
         let { username, password, confirmPassword, email } = this.state;
         let { ipAddresses } = this.state;
@@ -237,6 +292,11 @@ export default class Modal extends Component {
 
     }
 
+    /**
+    |--------------------------------------------------
+    | Close modal
+    |--------------------------------------------------
+    */
     _handleClose = () => {
         this.setState({
             ipAddress: '',

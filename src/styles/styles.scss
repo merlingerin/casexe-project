@@ -74,11 +74,11 @@
     &--red {
         color: #ffce81;
         border: 1px solid #ffce81;
-        box-shadow: 0px 0px 25px #ffce81, inset 0 0 15px #ffce81;
+        box-shadow: 0px 0px 25px 1px #ffce81, inset 0 0 15px 3px #ffce81;
         background-color: #992b00;
     }
     &--blue {
-        box-shadow: 0px 0px 25px #81fbff, inset 0px 0px 15px #5bb7cf;
+        box-shadow: 0px 0px 25px 1px #81fbff, inset 0px 0px 15px 3px #5bb7cf;
         color: #81fbff;
         background-color: #1c3999;
         border: 1px solid #81fbff;
@@ -225,6 +225,7 @@
             margin-left: auto;
             padding: 5px 0 0;
             font-size: 14px;
+            text-align: left;
             i {
                 margin-right: 5px;
                 color: #e30103;
@@ -392,4 +393,30 @@
     animation-duration: 0.75s;
     -webkit-animation-name: bounceIn;
     animation-name: bounceIn;
+  }
+
+  .games__grid {
+    .card {
+        display: block;
+        float: left;
+        width: 19.5%;
+        height: 150px;
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+        &__game-title {
+            color: #e8e9ea;
+            font-size: 14px;
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+    .some-slider {
+        display: block;
+        float: right;
+        width: 39%;
+        height: 300px;
+    }
   }

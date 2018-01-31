@@ -1,13 +1,7 @@
 import { combineReducers } from 'redux';
 
-import books from './books.js';
-import authors from './authors.js';
-import authorInfo from './authorInfo.js';
-import bookInfo from './bookInfo.js';
+import modal from './modal';
 
 export default combineReducers({
-    books,
-    bookInfo,
-    authors,
-    authorInfo
+    modal
 });

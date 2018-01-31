@@ -1,8 +1,24 @@
 .header__registration {
-    background-image: url('../../../assets/images/backgrounds/header-registration-bg.jpg');
     background-size: cover;
     display: flex;
-    padding: 35px 0;
+    border-top: 1px solid #93cfec;
+    border-bottom: 1px solid #93cfec;
+    padding-top: .5%;
+    .registration__controls {
+        flex: 0 0 50%;
+        display: flex;
+        align-self: center;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-left: auto;
+    }
+    .logo {
+        flex: 0 0 40%;
+        height: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../../../assets/images/logo.png');
+    }
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -11,53 +27,33 @@
     .btn-forgotPassword {
         display: inline-block;
         margin-left: auto;
-        margin-right: 11%;
+        margin-right: 25%;
         font-family: 'Roboto Condensed', sans-serif;
         color: #9f9f9f;
-        margin-top: 15px;
+        margin-top: 5px;
+        &:active {
+            border: none;
+        }
     }
-    .button-wrapper {
-        margin-right: 2%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: inline-block;
+    .btn-login {
+        margin-left: 10px;
+    }
+    .btn-registration {
+        padding: 3px 15px;
+        margin-right: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
         border-radius: 5px;
-        &.btn--red {
-            margin-right: 0;
-            margin-left: 2%;
-            .btn-registration {
-                color: #ffce81;
-                border: 1px solid #ffce81;
-                box-shadow: 0px 0px 25px #ffce81, inset 0 0 15px #ffce81;
-                background-color: #992b00;
-            }  
-        }
-        &.btn--blue {
-            .btn-registration {
-                box-shadow: 0px 0px 25px #81fbff, inset 0px 0px 15px #5bb7cf;
-                color: #81fbff;
-                background-color: #1c3999;
-                border: 1px solid #81fbff;
-            }            
-        }
         cursor: pointer;
-        .btn-registration {
-            background-color: transparent;
-            padding: 3px 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-            border-radius: 5px;
-            cursor: pointer;
-            &:active {
-                border-style: solid;                
-            }          
-            &:focus {
-                outline: none;
-            }
-        }        
-    }
+        &:active {
+            border-style: solid;                
+        }          
+        &:focus {
+            outline: none;
+        }
+    }  
     .input-group {
-        width: 32%;
+        flex: 3;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -78,9 +74,6 @@
         &:active {
             outline: none;
             border: none;
-        }
-        &--username {
-            margin-right: 2%;
         }
     }
 }   

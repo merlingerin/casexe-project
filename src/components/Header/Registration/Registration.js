@@ -1,68 +1,60 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Modal from '../../Modal/Modal';
+import { toggleModal } from '../../../actions';
 
 import './Registration.css';
 
 const RegistrationButton = (props) => {
-    let { color, text } = props;
+    let { color, text, specialClass } = props;
 
     return (
-        <div 
-            className="button-wrapper"
-            className={`button-wrapper ${color === 'blue' ? 'btn--blue' : 'btn--red' }`}
-        >
-            <button
-                className={`btn btn-registration`}
-                name="registration"
+        <button
+                className={`btn btn-${specialClass} btn-default btn--${color}`}
                 onClick={props._toggleModal}
             >
                 { text }
-            </button>
-        </div>
+        </button>
     )
 }
 
-export default class Registration extends Component {
-    state = {
-        isModalOpen: false
-    }
-    
-    _toggleModal = () => {
-        this.setState(prevState => ({isModalOpen: !this.state.isModalOpen}));
-    }
+class Registration extends Component {
 
     render() {
         return (
             <div className="header__registration">
                 <div className="container">
-                    <RegistrationButton 
-                        text='Registration' 
-                        color='blue' 
-                        _toggleModal={this._toggleModal}
-                    />
-                    <div className="input-group">
-                        <input 
-                            className="header__input header__input--username" 
-                            type="text"
-                            placeholder="Username"                    
+                    <Link to="/" className="header__logo logo">
+                    </Link>
+                    <div className="registration__controls">
+                        <RegistrationButton 
+                            text='Registration' 
+                            color='blue' 
+                            specialClass='registration'
+                            _toggleModal={this.props.toggleModal}
                         />
-                        <input 
-                            className="header__input header__input--password" 
-                            type="password"
-                            placeholder="Password"
-                        />
-                    </div>
-                    <RegistrationButton text='Login' color='red' />
-                    <div className="row">
+                        <div className="input-group">
+                            <input 
+                                className="header__input header__input--username" 
+                                type="text"
+                                placeholder="Username"                    
+                            />
+                            <input 
+                                className="header__input header__input--password" 
+                                type="password"
+                                placeholder="Password"
+                            />
+                        </div>
+                        <RegistrationButton text='Login' color='red' specialClass='login' />
                         <Link to="/" className="btn btn-forgotPassword">Forgot Password</Link>
                     </div>
                 </div>
-                {   this.state.isModalOpen &&
+                {   this.props.modal.isOpenModal &&
                     ReactDOM.createPortal(
-                    <Modal _toggleModal={this._toggleModal} />,
+                    <Modal _toggleModal={this.props.toggleModal} />,
                     document.getElementById('registration-modal')
                     )
                 }
@@ -70,3 +62,13 @@ export default class Registration extends Component {
           )
     }
 }
+
+const mapStateToProps = state => ({
+    modal: state.modal
+})
+
+const mapDispatchToProps = {
+    toggleModal
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Registration)
