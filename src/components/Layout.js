@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     Route,
-    Switch
+    Switch,
+    NavLink
 } from 'react-router-dom';
 
 import Header from './Header/Header';
@@ -17,6 +18,11 @@ const Layout = () => (
             <WidgetBar />
             <Route exact path="/"  component={HomePage} />
             <Route exact path="/bills"  component={IndexPage} />
+            <Route exact path="/get-prize"  component={IndexPage} />
+            <Route exact path="/bonuses"  component={IndexPage} />
+            <Route exact path="/mobile-site"  component={IndexPage} />
+            <Route exact path="/contacts"  component={IndexPage} />
+            <Route exact path="/game/id=:id"  render={({match}) => <h1>Game id = {match.params.id}</h1>} />            
             <Footer />
     </div>
 );

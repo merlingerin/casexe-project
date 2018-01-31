@@ -52,7 +52,7 @@
     text-align: left; }
     .promotions-slider .slick-dots li.slick-active button:before {
       color: white;
-      text-shadow: -1px -1px 0 #998bb6,   1px -1px 0 #998bb6, -1px 1px 0 #998bb6, 1px 1px 0 #998bb6, 0px 0px 10px #c3c6b4; }
+      text-shadow: -1px -1px 0 #998bb6,   1px -1px 0 #998bb6, -1px 1px 0 #998bb6, 1px 1px 0 #998bb6, 0px 0px 10px #c3c6b4; }
     .promotions-slider .slick-dots li button:before {
       width: 30px;
       height: 30px;

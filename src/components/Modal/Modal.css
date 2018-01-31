@@ -118,6 +118,17 @@
       .modal .input-group .error-text i {
         margin-right: 5px;
         color: #e30103; }
+    .modal .input-group ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: transparent;
+      opacity: 1;
+      /* Firefox */ }
+    .modal .input-group :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: transparent; }
+    .modal .input-group ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: transparent; }
 
 @media screen and (max-width: 768px) {
   .modal {
@@ -199,7 +210,18 @@
         font-size: 12px;
         text-align: right;
         bottom: -10px;
-        right: 0; } }
+        right: 0; }
+      .modal .input-group ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: red;
+        opacity: 1;
+        /* Firefox */ }
+      .modal .input-group :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: red; }
+      .modal .input-group ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: red; } }
 
 /*######  /.END MODAL 
 ####################################*/

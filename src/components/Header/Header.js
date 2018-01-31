@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { Navigation } from './Navigation/Navigation';
 import Registration from './Registration/Registration';
@@ -39,4 +40,4 @@ const mapDispatchToProps = {
   toggleModal
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
