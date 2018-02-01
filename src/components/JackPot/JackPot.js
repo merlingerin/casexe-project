@@ -45,9 +45,9 @@ class CoinValue extends Component {
 
     changeValue = () => {
 
-        this.setState({
-            value: this.state.value += this.state.increseTo
-        })
+        this.setState((prevState) => ({
+            value: prevState.value += prevState.increseTo
+        }))
     }
 
     render() {

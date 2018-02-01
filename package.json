@@ -1,8 +1,8 @@
 {
-  "name": "evoplay",
+  "name": "casexe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://merlingerin.github.io/casexe-app",
+  "homepage": "https://merlingerin.github.io/casexe-project",
   "dependencies": {
     "axios": "^0.17.1",
     "node-sass-chokidar": "^0.0.3",
