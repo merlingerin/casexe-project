@@ -258,7 +258,7 @@ export default class Modal extends Component {
         let { ipAddresses } = this.state;
         let modalErrors = [];
 
-        if( username === '' || password === '' || confirmPassword === '' || email == '' ) {
+        if( username === '' || password === '' || confirmPassword === '' || email === '' ) {
             let error = 'All fields are required';
             modalErrors = [...modalErrors, error];
         }

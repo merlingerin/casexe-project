@@ -17,20 +17,20 @@
     justify-content: space-between; }
   .jack-pot .card-gold .coin-value {
     color: gold;
-    background: -webkit-linear-gradient(top, #c88411, #feea88);
-    background: linear-gradient(top, #c88411, #feea88);
+    background: -webkit-linear-gradient(to top, #c88411, #feea88);
+    background: linear-gradient(to top, #c88411, #feea88);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .jack-pot .card-silver .coin-value {
     color: #636364;
-    background: -webkit-linear-gradient(top, #636364, #eeefef);
-    background: linear-gradient(top, #636364, #eeefef);
+    background: -webkit-linear-gradient(to top, #636364, #eeefef);
+    background: linear-gradient(to top, #636364, #eeefef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .jack-pot .card-bronze .coin-value {
     color: #9d5324;
-    background: -webkit-linear-gradient(top, #9d5324, #feedc9);
-    background: linear-gradient(top, #9d5324, #feedc9);
+    background: -webkit-linear-gradient(to top, #9d5324, #feedc9);
+    background: linear-gradient(to top, #9d5324, #feedc9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
