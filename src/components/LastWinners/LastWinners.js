@@ -77,7 +77,7 @@ export const LastWinners = (props) => (
                 {
                     sliderContent.map((item, idx) => {
                         return (
-                            <Link to={`player/id=${item.id}`}
+                            <Link to={`/player/id=${item.id}`}
                                 className="slide__wrapper"
                                 key={item.id} 
                             >

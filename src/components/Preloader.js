@@ -2,7 +2,7 @@ import React from 'react';
 
 let Preloader = () => (
     <div className="preloader-wrapper big active books-page__loader">
-        <div className="spinner-layer spinner-red-only">
+        <div className="spinner-layer spinner-white-only">
         <div className="circle-clipper left">
             <div className="circle"></div>
         </div><div className="gap-patch">

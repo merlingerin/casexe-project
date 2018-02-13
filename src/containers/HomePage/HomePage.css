@@ -25,14 +25,17 @@
       cursor: pointer; }
     .home-page .games__sort .divider {
       margin: 0 10px; }
-  .home-page .games__search .search__input {
-    color: #ffffff;
-    padding: 0 10px;
-    background-color: #000000;
-    border: 2px solid #89fbff;
-    box-shadow: 0px 0px 10px 3px #5373b8;
-    border-radius: 5px;
-    line-height: 1.75rem; }
+  .home-page .games__search {
+    width: 30%; }
+    .home-page .games__search .search__input {
+      width: 100%;
+      color: #ffffff;
+      padding: 0 10px;
+      background-color: #000000;
+      border: 2px solid #89fbff;
+      box-shadow: 0px 0px 10px 3px #5373b8;
+      border-radius: 5px;
+      line-height: 1.75rem; }
   .home-page .input-group {
     position: relative; }
     .home-page .input-group .fa-search {

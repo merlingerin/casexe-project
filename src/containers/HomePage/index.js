@@ -1,21 +1,50 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Transition from 'react-transition-group/Transition';
 
+
+import { 
+    fetchGames,
+    loadMoreGames
+} from '../../actions/fetchGames';
 import './HomePage.css';
+import  Preloader from '../../components/Preloader';
 
 import WidgetBar from '../WidgetBar';
 import { PromotionsSlider } from '../../components/PromotionsSlider/Promotions';
 import games from './games';
 
-
-export default class HomePage extends Component {
+class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            games: games,
+            games: this.props.games.games,
             sortByPopularity: false,
             sortByAphabet: false
         }
+    }
+
+    componentDidMount() {
+        /**
+        |--------------------------------------------------
+        | FETCH GAMES FROM API
+        |--------------------------------------------------
+        */
+        this.props.fetchGames();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        /**
+        |--------------------------------------------------
+        | On the right way, we need to replace all filtering
+        | and sorting functions in reducers, but it's a test
+        | project, so we placed them here
+        |--------------------------------------------------
+        */
+        this.setState((prevState) => ({
+            games: nextProps.games.games            
+        }))
     }
 
     /**
@@ -24,7 +53,7 @@ export default class HomePage extends Component {
     |--------------------------------------------------
     */
     _searchGames = (event) => {
-        let allGames = games;
+        let allGames = [...this.props.games.games];
         let input = event.target.value;
         let filteredGames = allGames.filter((item, idx) => {
             return item.title.toUpperCase().indexOf(input.toUpperCase()) !== -1;
@@ -83,22 +112,26 @@ export default class HomePage extends Component {
         }))
     }
 
-    /**
-    |--------------------------------------------------
-    | Load more game
-    |--------------------------------------------------
-    */
-    _loadMoreGames = () => {
-        let fetchedGames = [...this.state.games];
-        this.setState({
-            games: [...this.state.games, ...fetchedGames]
-        })
-    }
+    // /**
+    // |--------------------------------------------------
+    // | Load more game
+    // |--------------------------------------------------
+    // */
+    // _loadMoreGames = () => {
+    //     let fetchedGames = [...this.state.games];
+    //     this.setState({
+    //         games: [...this.state.games, ...fetchedGames]
+    //     })
+    // }
 
     render() {
+        
         const renderGames = () => (
             this.state.games.map((game, idx) => (
-                <div key={idx} className="card">
+                <div 
+                    key={idx}
+                    className="card"
+                >
                     <div className="card__image">
                         <img src={`${game.image}`} alt={`${game.title}`}/>  
                         <div className="inner-overlay">
@@ -110,6 +143,27 @@ export default class HomePage extends Component {
                 </div>
             ))
         )
+        
+        const LoadMoreBtn = () => (
+            this.props.games.fetching 
+            ?
+            ''
+            :
+            <div className="btn-wrapper">
+                {
+                    this.props.games.fetchingMoreGames ?
+                        <Preloader />
+                        :
+                        <button 
+                        className="btn btn--blue btn-default"
+                        onClick={this.props.loadMoreGames}
+                    >
+                        load more
+                    </button>
+                }
+            </div>
+        )
+
         return (
             <div className="home-page">
                 <div className="container">
@@ -137,19 +191,32 @@ export default class HomePage extends Component {
                             <div className="some-slider">
                                 <PromotionsSlider />
                             </div>
-                            { this.state.games !== undefined ? renderGames() : 'Can\'t fetch games from server :(' }
+
+                            { this.props.games.fetching 
+                                ? 
+                                <div className="preloader-container">
+                                    <Preloader />
+                                </div> 
+                                : 
+                                renderGames()
+                            }
+                            
                         </div>
-                        <div className="btn-wrapper">
-                            <button 
-                                className="btn btn--blue btn-default"
-                                onClick={this._loadMoreGames}
-                            >
-                                load more
-                            </button>
-                        </div>
+                        <LoadMoreBtn />
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+    games: state.games
+})
+
+const mapDispatchToProps = {
+    fetchGames,
+    loadMoreGames
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

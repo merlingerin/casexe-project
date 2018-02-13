@@ -17,12 +17,13 @@ const Layout = () => (
             <Header />
             <WidgetBar />
             <Route exact path="/"  component={HomePage} />
-            <Route exact path="/bills"  component={IndexPage} />
-            <Route exact path="/get-prize"  component={IndexPage} />
-            <Route exact path="/bonuses"  component={IndexPage} />
-            <Route exact path="/mobile-site"  component={IndexPage} />
-            <Route exact path="/contacts"  component={IndexPage} />
-            <Route exact path="/game/id=:id"  render={({match}) => <h1>Game id = {match.params.id}</h1>} />            
+            <Route path="/bills"  component={IndexPage} />
+            <Route path="/get-prize"  component={IndexPage} />
+            <Route path="/bonuses"  component={IndexPage} />
+            <Route path="/mobile-site"  component={IndexPage} />
+            <Route path="/contacts"  component={IndexPage} />
+            <Route path="/game/id=:id"  render={({match}) => <div className="container"><h1>Game id = {match.params.id}</h1></div>} />            
+            <Route path="/player/id=:id"  render={({match}) => <div className="container"><h1>Player id = {match.params.id}</h1></div>} />            
             <Footer />
     </div>
 );
